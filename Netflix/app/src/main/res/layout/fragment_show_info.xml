@@ -1,0 +1,118 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <import type="ir.es.mohammad.netflix.UserViewModel" />
+
+        <variable
+            name="user"
+            type="UserViewModel" />
+    </data>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:context=".ShowInfoFragment">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/imgProfilePic"
+                android:layout_width="128dp"
+                android:layout_height="128dp"
+                android:layout_marginTop="16dp"
+                android:src="@{user.profileImgDrawable, default = @drawable/profile_pic}"
+                app:layout_constraintBottom_toTopOf="@+id/guideline6"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewFullName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:minHeight="48dp"
+                android:text='@{"FullName :" + user.fullName, default = "FullName :"}'
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewEmail"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="@+id/guideline6" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:minHeight="48dp"
+                android:text='@{"Email :" + user.email, default = "Email :"}'
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewUsername"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewFullName" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewUsername"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/rounded_corner"
+                android:minHeight="48dp"
+                android:text='@{"Username :" + user.username, default = "Username :"}'
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/textViewPhoneNumber"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEmail" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textViewPhoneNumber"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/rounded_corner"
+                android:minHeight="48dp"
+                android:text='@{"PhoneNumber :" + user.phoneNumber, default = "PhoneNumber :"}'
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toBottomOf="@+id/textViewUsername" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.07" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.93" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.25" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

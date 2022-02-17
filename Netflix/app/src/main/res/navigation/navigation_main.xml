@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="ir.es.mohammad.netflix.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/comingSoonFragment"
+        android:name="ir.es.mohammad.netflix.ComingSoonFragment"
+        android:label="fragment_coming_soon"
+        tools:layout="@layout/fragment_coming_soon" />
+    <fragment
+        android:id="@+id/favoriteFragment"
+        android:name="ir.es.mohammad.netflix.FavoriteFragment"
+        android:label="FavoriteFragment" />
+    <fragment
+        android:id="@+id/showInfoFragment"
+        android:name="ir.es.mohammad.netflix.ShowInfoFragment"
+        android:label="ShowInfoFragment" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="ir.es.mohammad.netflix.RegisterFragment"
+        android:label="RegisterFragment" />
+</navigation>

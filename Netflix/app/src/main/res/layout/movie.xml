@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageMovieImg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:srcCompat="@drawable/channels4_profile" />
+
+    <ImageButton
+        android:id="@+id/btnMovieAction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageMovieImg"
+        app:layout_constraintEnd_toEndOf="@+id/imageMovieImg"
+        tools:srcCompat="@drawable/favorite_icon" />
+
+    <TextView
+        android:id="@+id/textMovieName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="@+id/imageMovieImg"
+        app:layout_constraintStart_toStartOf="@+id/imageMovieImg"
+        app:layout_constraintTop_toBottomOf="@+id/imageMovieImg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,167 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="128dp"
+            android:layout_height="128dp"
+            android:layout_marginTop="16dp"
+            android:src="@drawable/profile_pic"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatImageButton
+            android:id="@+id/btnAddPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:src="@drawable/baseline_add_a_photo_24"
+            android:text="Button"
+            app:cornerRadius="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline4"
+            app:layout_constraintStart_toEndOf="@+id/imgProfilePic" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextLayoutFullName"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLayoutEmail"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="@+id/guideline4">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextFullName"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Full name*"
+                android:inputType="textPersonName"
+                android:minHeight="32dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+
+            android:id="@+id/editTextLayoutEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLayoutUsername"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLayoutFullName">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Email*"
+                android:inputType="textEmailAddress"
+                android:minHeight="32dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextLayoutUsername"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/editTextLayoutPassword"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLayoutEmail">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextUsername"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Username"
+                android:inputType="textPersonName"
+                android:minHeight="32dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/editTextLayoutPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:endIconMode="clear_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toTopOf="@+id/btnRegister"
+            app:layout_constraintEnd_toStartOf="@+id/guideline3"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLayoutUsername">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editTextPhoneNumber"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Phone Number"
+                android:inputType="phone"
+                android:minHeight="3dp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="32dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:shadowRadius="10"
+            android:text="Register"
+            android:enabled="false"
+            app:cornerRadius="16dp"
+            app:elevation="5dp"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="@+id/editTextLayoutPassword"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/editTextLayoutPassword" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline3"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.93" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.21" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
